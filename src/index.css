@@ -1,13 +1,179 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+
+  --th1-bg-L-C:#4C5B5C;
+  --th2-bg-L-C:#386FA4;
+  --th3-bg-L-C:#DCDCDD;
+  --th1-bg-R-C:#4C5B5C;
+  --th2-bg-R-C:#386FA4;
+  --th3-bg-R-C:#DCDCDD;
+
+  --th1-bg-L-O:60%;
+  --th2-bg-L-O:60%;
+  --th3-bg-L-O:60%;
+  --th1-bg-R-O:40%;
+  --th2-bg-R-O:40%;
+  --th3-bg-R-O:40%;
+
+  --th1-num-L-C:#FF715B;
+  --th1-num-L-O:100%
+  --th1-num-R-C:#F48877;
+  --th1-num-R-O:100%  
+
+  --th2-num-L-C:#386FA4;
+  --th2-num-L-O:100%
+  --th2-num-R-C:#4F93D3;
+  --th2-num-R-O:100%  
+
+  --th3-num-L-C:#1985A1;
+  --th3-num-L-O:100%
+  --th3-num-R-C:#3BACC9;
+  --th3-num-R-O:100%  
+
+  --th1-opr-L-C:#F9CB40;
+  --th1-opr-L-O:100%;  
+  --th1-opr-R-C:#FBDF8A;
+  --th1-opr-R-O:100%;
+
+  --th2-opr-L-C:#84D2F6;
+  --th2-opr-L-O:100%;  
+  --th2-opr-R-C:#65B7DD;
+  --th2-opr-R-O:100%;
+
+  --th3-opr-L-C:#4C5C68;
+  --th3-opr-L-O:100%;  
+  --th3-opr-R-C:#6F8596;
+  --th3-opr-R-O:100%;
+
+  --th1-ftr-L-C:#4C5B5C;
+  --th1-ftr-L-O:100%;
+  --th1-ftr-R-C:#4C5B5C;
+  --th1-ftr-R-O:100%;
+
+  --th2-ftr-L-C:#386FA4;
+  --th2-ftr-L-O:100%;
+  --th2-ftr-R-C:#386FA4;
+  --th2-ftr-R-O:100%;
+
+  --th3-ftr-L-C:#46494C;
+  --th3-ftr-L-O:100%;
+  --th3-ftr-R-C:#46494C;
+  --th3-ftr-R-O:100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+main{
+
+  border:1px solid black;
+  max-width: 360px; 
+  background: linear-gradient(to bottom,rgba(76,91,92,0.6),rgba(76,91,92,0.4)) ;   
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+#header-section{
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 10px;
+}
+
+#header-section p{
+  font-size: 12px;
+  color: #fff;
+}
+#theme-selector-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+.theme-circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#theme-1{
+  background-color: #FF715B;
+}
+#theme-2{
+  background-color: #386FA4;
+}
+#theme-3{
+  background-color: #1985A1;
+}
+
+#screen-section{
+  background-color: #fff;
+  border:1px solid black;  
+  width: 338px;
+  height: 66px;
+  margin-top:20px;
+  padding:0 10px;
+}
+
+#screen-section p{
+  padding:11px;
+  font-size: 36px;
+  overflow:hidden;
+}
+
+#keypad-section{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 11.5px;
+  row-gap: 23px;
+  border: 1px solid black;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 9px;
+  padding: 11.5px;
+}
+.btn{
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+}
+
+.number-btn{
+  background-color: #FF715B;
+}
+.opr-btn{
+  background-color: #F9CB40;
+}
+footer{
+  font-size: 10px;
+  color:#fff;
+  background-color: #4C5B5C;
+  width: 100%;
+  height: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+@media only screen and (min-width:400px){
+  main{
+    margin:100px auto;
+  }
 }
